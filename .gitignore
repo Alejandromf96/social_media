@@ -1,0 +1,14 @@
+# Entorno de Python
+venv/
+*.pyc
+__pycache__/
+*.sqlite3  # Para archivos de base de datos locales
+
+# Archivos de configuración
+*.env
+config.py
+instance/
+
+# Archivos del sistema
+.DS_Store
+*.log
