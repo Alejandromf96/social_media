@@ -1,0 +1,43 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inicio de Sesión{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            
+            
+            <!-- Condición para mostrar "Register" solo si el usuario NO está autenticado -->
+            {% if not current_user.is_authenticated %}
+                <div class="register"><a href="{{ url_for('register') }}">Register</a></div>
+            {% else %}
+                <div><a href="{{ url_for('logout') }}">Cerrar sesión</a></div>
+            {% endif %}
+            
+            <div class="dark-mode-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="toggleDarkMode">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </nav>
+
+        <div class="center">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <script>
+        const toggleDarkModeCheckbox = document.getElementById('toggleDarkMode');
+        toggleDarkModeCheckbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode', toggleDarkModeCheckbox.checked);
+            document.querySelectorAll('button').forEach(btn => btn.classList.toggle('dark-mode', toggleDarkModeCheckbox.checked));
+        });
+    </script>
+</body>
+</html>

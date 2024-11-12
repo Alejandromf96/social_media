@@ -1,0 +1,23 @@
+<!-- edit_post.html -->
+{% extends "base.html" %}
+
+{% block title %}Editar Publicación{% endblock %}
+
+{% block content %}
+    <h1>Editar Publicación</h1>
+    <form method="POST" action="{{ url_for('edit_post', post_id=post.id) }}">
+        {{ form.hidden_tag() }}
+        <div>
+            <label for="title">{{ form.title.label }}</label>
+            {{ form.title(id='title') }}
+        </div>
+        <div>
+            <label for="content">{{ form.content.label }}</label>
+            {{ form.content(id='content') }}
+        </div>
+        <div>
+            {{ form.submit(class='btn btn-primary') }}
+        </div>
+    </form>
+    <a href="{{ url_for('feed') }}">Cancelar</a>
+{% endblock %}

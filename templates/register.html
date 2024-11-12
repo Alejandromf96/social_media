@@ -1,0 +1,41 @@
+<!-- register.html -->
+{% extends "base.html" %}
+
+
+{% block title %}Registro de Usuario{% endblock %}
+
+{% block nav %}
+    <!-- Enlace al Feed en lugar del enlace de "Register" -->
+    <a href="{{ url_for('login') }}">Login</a>
+{% endblock %}
+
+{% block content %}
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <p>Registro de Usuario</p>
+        <label for="username">Nombre de usuario:</label><br>
+        {{ form.username(size=32, id='username') }}
+        {% for error in form.username.errors %}
+            <div class="error">{{ error }}</div>
+        {% endfor %}
+
+        <label for="email">Correo electrónico:</label><br>
+        {{ form.email(size=32, id='email') }}
+        {% for error in form.email.errors %}
+            <div class="error">{{ error }}</div>
+        {% endfor %}
+
+        <label for="password">Contraseña:</label><br>
+        {{ form.password(size=32, id='password') }}
+        {% for error in form.password.errors %}
+            <div class="error">{{ error }}</div>
+        {% endfor %}
+
+        <label for="confirm_password">Confirmar contraseña:</label><br>
+        {{ form.confirm_password(size=32, id='confirm_password') }}
+        {% for error in form.confirm_password.errors %}
+            <div class="error">{{ error }}</div>
+        {% endfor %}
+        <button type="submit">Registrar</button>
+    </form>
+{% endblock %}

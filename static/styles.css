@@ -1,0 +1,362 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e6ecf0;
+    margin: 0;
+    padding: 0;
+    color: #14171a;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px; /* Ancho del feed centrado */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco clásico */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+h1, h2, p {
+    margin: 0 0 10px;
+}
+
+button {
+    background-color: #1da1f2; /* Clásico azul de Twitter */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px; /* Botones redondeados estilo Twitter */
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a91da;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212; /* Fondo general en modo oscuro */
+    color: #e1e8ed; /* Gris claro para texto */
+}
+
+.dark-mode .container, .dark-mode .center {
+    background-color: #1e1e1e; /* Fondo oscuro para contenedores */
+    color: #e1e8ed;
+}
+
+/* Dark Mode Toggle Switch */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1da1f2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+/* Opcional: Adaptación de los elementos al modo oscuro */
+.dark-mode-toggle span {
+    color: #657786;
+}
+
+.dark-mode .slider {
+    background-color: #555;
+}
+
+.dark-mode input:checked + .slider {
+    background-color: #1da1f2;
+}
+
+.dark-mode .dark-mode-toggle span {
+    color: #e1e8ed;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dark-mode nav {
+    background-color: #1e1e1e; /* Fondo oscuro para la barra de navegación */
+}
+
+nav a {
+    color: #1da1f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav button {
+    background-color: #f5f8fa; /* Botón claro en la barra de navegación */
+    color: #1da1f2;
+    border: 1px solid #1da1f2;
+}
+
+nav button:hover {
+    background-color: #e8f5fe;
+}
+
+.dark-mode nav a, .dark-mode nav button {
+    color: #1da1f2;
+}
+
+.dark-mode nav button {
+    background-color: #2b2b2b;
+    border: 1px solid #1da1f2;
+}
+
+/* Centered Form */
+.center {
+    max-width: 600px; /* Reduce el ancho máximo para centrar el contenido */
+    margin: 0 auto;
+    text-align: left; /* Centra el contenido horizontalmente */
+}
+
+.center p {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* Formulario de Nueva Publicación */
+/* Formulario de Nueva Publicación */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el formulario a la izquierda */
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Centra el formulario dentro del contenedor */
+    padding: 10px; /* Añade padding alrededor del formulario */
+    background-color: #f5f8fa; /* Fondo claro */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    width: 100%; /* Asegura que cada campo ocupe el ancho completo del formulario */
+    margin-bottom: 15px;
+}
+
+form label {
+    font-size: 14px;
+    color: #657786;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccd6dd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+form button {
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+    margin-top: 10px;
+    background-color: #1da1f2; /* Botón azul */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1a91da;
+}
+
+/* Estilo de formulario en modo oscuro */
+.dark-mode form {
+    background-color: #2b2b2b;
+    color: #e1e8ed;
+}
+
+.dark-mode form label {
+    color: #e1e8ed;
+}
+
+.dark-mode form input, .dark-mode form textarea {
+    background-color: #1c1c1c;
+    color: #e1e8ed;
+    border: 1px solid #4a4a4a;
+}
+
+.dark-mode form button {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.dark-mode form button:hover {
+    background-color: #1a91da;
+}
+
+/* Post Styles */
+.post {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left; /* Alinea el texto de las publicaciones a la izquierda */
+}
+
+.dark-mode .post {
+    background-color: #1e1e1e; /* Fondo oscuro para publicaciones */
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #14171a;
+}
+
+/* Estilo para el contenido de la publicación (similar al título) */
+.post p {
+    font-weight: normal;       /* Ajuste a un peso de fuente normal para legibilidad */
+    font-size: 15px;           /* Tamaño de fuente ligeramente más grande */
+    color: #14171a;            /* Color de texto */
+    background-color: #f8f9fa; /* Fondo claro para resaltar el contenido */
+    padding: 10px;             /* Espaciado interno para darle un aspecto de tarjeta */
+    border-radius: 5px;        /* Bordes redondeados */
+    border: 1px solid #e1e8ed; /* Borde gris suave */
+    margin-bottom: 10px;       /* Separación del siguiente elemento */
+}
+
+.dark-mode .post-title, .dark-mode .post p {
+    color: #e1e8ed;             /* Color claro en modo oscuro */
+    background-color: #2b2b2b;  /* Fondo oscuro para el contenido en modo oscuro */
+    border: 1px solid #444;     /* Borde más oscuro en modo oscuro */
+}
+
+.post-author {
+    font-size: 12px;
+    color: #657786;
+    margin-top: 8px;
+}
+
+.dark-mode .post-author {
+    color: #8899a6; /* Gris claro */
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    background-color: #657786; /* Botones gris Twitter */
+    padding: 5px 10px;
+    font-size: 12px;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+}
+
+.delete-btn {
+    background-color: #e0245e; /* Rojo clásico para eliminar */
+}
+
+.dark-mode .edit-btn, .dark-mode .delete-btn {
+    background-color: #2b2b2b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%; /* Ajusta el contenedor para pantallas pequeñas */
+    }
+
+    .center {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .post {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+
+/* Form Error Handling */
+.error {
+    color: #e0245e;
+    font-size: 12px;
+}
+
+.dark-mode .error {
+    color: #ff6b6b; /* Rojo claro para errores en modo oscuro */
+}
