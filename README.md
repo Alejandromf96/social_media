@@ -1,3 +1,17 @@
+## Vista previa de la aplicación
+
+### Página de Inicio
+![Página de inicio](images/social.png)
+
+### Feed de Publicaciones
+![Feed de publicaciones](images/social2.png)
+
+### Crear Publicación
+![Crear publicación](images/social3.png)
+
+
+
+
 # Social Network Application
 
 This is a social networking web application inspired by the classic designs of early social media platforms like Facebook and Twitter. The app allows users to create accounts, log in, and post updates to a central feed. Users can also edit or delete their own posts. The UI is designed to be responsive, user-friendly, and offers both light and dark mode themes.
