@@ -41,5 +41,4 @@ This is a social networking web application inspired by the classic designs of e
 2. Log in to access the main feed and start creating posts.
 3. Toggle between light and dark mode using the button in the navigation bar.
 
-## Project Structure
 
