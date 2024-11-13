@@ -1,10 +1,10 @@
 <!-- edit_post.html -->
 {% extends "base.html" %}
 
-{% block title %}Editar Publicación{% endblock %}
+{% block title %}Edit Post{% endblock %}
 
 {% block content %}
-    <h1>Editar Publicación</h1>
+    <h1>Edit Post</h1>
     <form method="POST" action="{{ url_for('edit_post', post_id=post.id) }}">
         {{ form.hidden_tag() }}
         <div>
@@ -19,5 +19,5 @@
             {{ form.submit(class='btn btn-primary') }}
         </div>
     </form>
-    <a href="{{ url_for('feed') }}">Cancelar</a>
+    <a href="{{ url_for('feed') }}">Cancel</a>
 {% endblock %}

@@ -1,12 +1,12 @@
 <!-- login.html -->
 {% extends "base.html" %}
 
-{% block title %}Inicio de Sesión{% endblock %}
+{% block title %}Log In{% endblock %}
 
 {% block content %}
     <form method="POST" action="">
         {{ form.hidden_tag() }}
-        <p>Iniciar Sesión</p>
+        <p>Log in</p>
         <div>
             <label for="email">{{ form.email.label }}</label><br>
             {{ form.email(size=32, id='email') }}<br>

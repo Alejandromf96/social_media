@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Inicio de Sesión{% endblock %}</title>
+    <title>{% block title %}Login{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -16,7 +16,7 @@
             {% if not current_user.is_authenticated %}
                 <div class="register"><a href="{{ url_for('register') }}">Register</a></div>
             {% else %}
-                <div><a href="{{ url_for('logout') }}">Cerrar sesión</a></div>
+                <div><a href="{{ url_for('logout') }}">Log out</a></div>
             {% endif %}
             
             <div class="dark-mode-toggle">
