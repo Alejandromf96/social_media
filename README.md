@@ -1,13 +1,13 @@
 ## Vista previa de la aplicación
 
 ### Página de Inicio
-![Página de inicio](images/social.png)
+![](social.png)
 
 ### Feed de Publicaciones
-![Feed de publicaciones](images/social2.png)
+![](social2.png)
 
 ### Crear Publicación
-![Crear publicación](images/social3.png)
+![](social3.png)
 
 
 
